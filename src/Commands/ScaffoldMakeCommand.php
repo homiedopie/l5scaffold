@@ -70,7 +70,14 @@ class ScaffoldMakeCommand extends Command
         $this->files = $files;
         $this->composer = app()['composer'];
     }
-
+    /**
+     * Add ths to be handled in 5.5
+     * Credits to: DeathEmpire
+     */
+    public function handle()
+    {
+        return $this->fire();
+    }
     /**
      * Execute the console command.
      *
